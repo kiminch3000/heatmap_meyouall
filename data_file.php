@@ -4,7 +4,7 @@
 	// 폴더명 지정
 	// $dir = "/home/www/foo/test_folder_name";
 
-	include_once "index_db_connect.php";
+	include "data_connect.php";
 
 	$save_table="CCTV_01";
 	$dir = "./".$save_table."/";
@@ -40,7 +40,7 @@
 		if(is_file($file_path)){
 			$files[] = $filename;
 			$save_path=$file_path;
-			include "./excel_save.php";
+			include "data_input.php";
 		}
 	}
 	// 핸들 해제 
